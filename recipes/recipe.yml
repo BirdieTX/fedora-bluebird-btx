@@ -50,7 +50,6 @@ modules:
         new: ffmpeg-libs
       - old: libswscale
         new: ffmpeg-libs
-      - ffmpeg
       - ffmpeg-libs
       - x264-libs
       - x265-libs
@@ -59,21 +58,16 @@ modules:
       packages:
       - libva
       - intel-gmmlib
-
     - from-repo: terra
       allow-erasing: true
       packages:
         - kvazaar-libs
         - libxavs
-
     - from-repo: rpmfusion-free-updates
       allow-erasing: true
       packages:
       - libfreeaptx
       - libheif-freeworld
-      
-  - type: dnf
-    replace:
     - from-repo: terra-mesa
       packages:
       - mesa-dri-drivers
@@ -117,6 +111,7 @@ modules:
   - type: dnf
     install:
       packages:
+      - ffmpeg
       - gamescope
       - steam
 
