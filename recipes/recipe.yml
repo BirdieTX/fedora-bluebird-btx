@@ -63,7 +63,7 @@ modules:
       allow-erasing: true
       packages:
         - kvazaar-libs
-    - from-repo: rpm-fusion-free
+    - from-repo: rpmfusion-free
       allow-erasing: true
       packages:
       - old: libheif
