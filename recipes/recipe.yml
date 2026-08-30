@@ -74,7 +74,7 @@ modules:
       - zsh-syntax-highlighting
 
   - type: dnf
-    remove:
+    install:
       packages:
       - gamescope
       - steam
