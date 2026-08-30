@@ -46,11 +46,14 @@ modules:
         new: ffmpeg-libs
       - old: libavutil
         new: ffmpeg-libs
+      - old: libheif
+        new: libheif-freeworld
       - old: libswresample
         new: ffmpeg-libs
       - old: libswscale
         new: ffmpeg-libs
       - ffmpeg-libs
+      - libfreeaptx
       - x264-libs
       - x265-libs
     - from-repo: updates
@@ -62,11 +65,6 @@ modules:
       allow-erasing: true
       packages:
         - kvazaar-libs
-    - from-repo: rpmfusion-free-updates
-      allow-erasing: true
-      packages:
-      - libfreeaptx
-      - libheif-freeworld
     - from-repo: terra-mesa
       packages:
       - mesa-dri-drivers
