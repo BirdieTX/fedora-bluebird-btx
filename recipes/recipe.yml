@@ -33,22 +33,45 @@ modules:
 
   - type: dnf
     replace:
-      - from-repo: rpmfusion-free-updates
-        allow-erasing: true
-        packages:
-          - old: libavcodec
-            new: ffmpeg-libs
-          - old: libavfilter
-            new: ffmpeg-libs
-          - old: libavformat
-            new: ffmpeg-libs
-          - old: libavutil
-            new: ffmpeg-libs
-          - old: libswresample
-            new: ffmpeg-libs
-          - old: libswscale
-            new: ffmpeg-libs
+    - from-repo: rpmfusion-free-updates
+      allow-erasing: true
+      packages:
+      - old: libavcodec
+        new: ffmpeg-libs
+      - old: libavdevice
+        new: ffmpeg-libs
+      - old: libavfilter
+        new: ffmpeg-libs
+      - old: libavformat
+        new: ffmpeg-libs
+      - old: libavutil
+        new: ffmpeg-libs
+      - old: libswresample
+        new: ffmpeg-libs
+      - old: libswscale
+        new: ffmpeg-libs
+      - ffmpeg
+      - ffmpeg-libs
+      - x264-libs
+      - x265-libs
+    - from-repo: updates
+      allow-erasing: true
+      packages:
+      - libva
+      - intel-gmmlib
 
+    - from-repo: terra
+      allow-erasing: true
+      packages:
+        - kvazaar-libs
+        - libxavs
+
+    - from-repo: rpmfusion-free-updates
+      allow-erasing: true
+      packages:
+      - libfreeaptx
+      - libheif-freeworld
+      
   - type: dnf
     replace:
     - from-repo: terra-mesa
