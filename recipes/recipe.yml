@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: fedora-bluebird
+name: fedora-bluebird-btx
 description: This image is a fork of Fedora Silverblue for personal use by Birdie.
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 44
@@ -72,6 +72,12 @@ modules:
       - zsh-autosuggestions
       - zsh-html
       - zsh-syntax-highlighting
+
+  - type: dnf
+    remove:
+      packages:
+      - gamescope
+      - steam
 
   - type: dnf
     install:
@@ -163,12 +169,44 @@ modules:
       - notify: false
         scope: system
         install:
-        - com.belmoussaoui.Decoder
+        - com.adamcake.Bolt
         - com.brave.Browser
+        - com.belmoussaoui.Decoder
+        - com.belmoussaoui.Obfuscate
+        - com.dec05eba.gpu_screen_recorder
+        - com.discordapp.Discord
+        - com.github.Matoking.protontricks
         - com.github.tchx84.Flatseal
+        - com.markopejic.downloader
         - com.mattjakeman.ExtensionManager
+        - com.obsproject.Studio
+        - com.pokemmo.PokeMMO
+        - com.protonvpn.www
+        - com.rafaelmardojai.Blanket
+        - com.usebottles.bottles
         - com.vixalien.sticky
+        - com.vysp3r.ProtonPlus
+        - dev.bragefuglseth.Keypunch
+        - dev.zed.Zed
+        - fr.handbrake.ghb
+        - io.edcd.EDMarketConnector
+        - io.gitlab.adhami3310.Converter
+        - io.github.antimicrox.antimicrox
+        - io.github.diegoivan.pdf_metadata_editor
+        - io.github.fizzyizzy05.binary
+        - io.github.idevecore.Valuta
+        - io.github.Soundux
+        - io.github.wartybix.Constrict
         - io.missioncenter.MissionCenter
+        - md.obsidian.Obsidian
+        - me.proton.Mail
+        - me.proton.Pass
+        - net.lutris.Lutris
+        - net.runelite.RuneLite
+        - org.audacityteam.Audacity
+        - org.blender.Blender
+        - org.desktop_plus.desktop-plus
+        - org.gimp.GIMP
         - org.gnome.baobab
         - org.gnome.Calculator
         - org.gnome.Calendar
@@ -177,19 +215,41 @@ modules:
         - org.gnome.clocks
         - org.gnome.Decibels
         - org.gnome.font-viewer
+        - org.gnome.gitlab.YaLTeR.VideoTrimmer
         - org.gnome.Logs
         - org.gnome.Loupe
         - org.gnome.Mahjongg
         - org.gnome.Mines
         - org.gnome.Nibbles
         - org.gnome.Papers
+        - org.gnome.Polari
         - org.gnome.Showtime
         - org.gnome.SimpleScan
         - org.gnome.Snapshot
         - org.gnome.Sudoku
         - org.gnome.TextEditor
-        - org.libreoffice.LibreOffice
         - org.gnome.Weather
+        - org.inkscape.Inkscape
+        - org.kde.elisa
+        - org.kde.kdenlive
+        - org.kde.kid3
+        - org.kde.kolourpaint
+        - org.kde.kpat
+        - org.kde.krename
+        - org.kde.krita
+        - org.kde.kstars
+        - org.kde.okteta
+        - org.libreoffice.LibreOffice
+        - org.localsend.localsend_app
+        - org.openttd.OpenTTD
+        - org.pulseaudio.pavucontrol
+        - org.qbittorrent.qBittorrent
+        - org.remmina.Remmina
+        - org.signal.Signal
+        - org.virt_manager.virt-manager
+        - org.videolan.VLC
+        - ro.go.hmlendea.DL-Desktop
+        - sh.ppy.osu
 
   - type: gnome-extensions
     install:
