@@ -59,6 +59,11 @@ modules:
       packages:
       - libva
       - intel-gmmlib
+    - from-repo: fedora
+      allow-erasing: true
+      packages:
+      - old: libfdk-aac
+        new: fdk-aac-free
     - from-repo: terra
       allow-erasing: true
       packages:
