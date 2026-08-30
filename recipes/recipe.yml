@@ -62,7 +62,6 @@ modules:
       allow-erasing: true
       packages:
         - kvazaar-libs
-        - libxavs
     - from-repo: rpmfusion-free-updates
       allow-erasing: true
       packages:
@@ -113,6 +112,7 @@ modules:
       packages:
       - ffmpeg
       - gamescope
+      - libxavs
       - steam
 
   - type: dnf
