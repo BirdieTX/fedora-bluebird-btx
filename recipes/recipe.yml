@@ -1,45 +1,212 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
-name: fedora-bluebird-btx
-# description will be included in the image's metadata
-description: This is my personal OS image.
-
-# the base image to build on top of (FROM) and the version tag to use
+name: fedora-bluebird
+description: This image is a fork of Fedora Silverblue for personal use by Birdie.
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: latest # You can pin to a specific version of Fedora as well
+image-version: 44
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: files
     files:
       - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+        # scary
+        destination: /
 
   - type: dnf
     repos:
       copr:
-        - atim/starship
-    install:
-      packages:
-        - micro
-        - starship
+      - ublue-os/packages
+      files:
+      - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      nonfree: rpmfusion
     remove:
       packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - firefox
+      - firefox-langpacks
+      - gnome-system-monitor
+      - nano-default-editor
+  
+  - type: dnf
+    install:
+      packages:
+      - terra-release-mesa
+
+  - type: dnf
+    replace:
+    - from-repo: terra-mesa
+      packages:
+      - mesa-dri-drivers
+      - mesa-filesystem
+      - mesa-libEGL
+      - mesa-libGL
+      - mesa-libgbm
+      - mesa-vulkan-drivers
+
+  - type: script
+    scripts:
+    - priority.sh
+
+  - type: dnf
+    install:
+      packages:
+      - alacritty
+      - btop
+      - cmatrix
+      - cargo
+      - eza
+      - fastfetch
+      - gstreamer1-plugins-ugly
+      - kf6-kirigami-addons
+      - kvantum
+      - mc
+      - qt5ct
+      - qt6ct
+      - rust
+      - setroubleshoot
+      - signal-cli
+      - starship
+      - vim-default-editor
+      - yazi
+      - zsh
+      - zsh-autocomplete
+      - zsh-autosuggestions
+      - zsh-html
+      - zsh-syntax-highlighting
+
+  - type: dnf
+    install:
+      packages:
+      - f21-backgrounds-gnome
+      - f22-backgrounds-gnome
+      - f23-backgrounds-gnome
+      - f24-backgrounds-gnome
+      - f25-backgrounds-gnome
+      - f26-backgrounds-gnome
+      - f27-backgrounds-gnome
+      - f28-backgrounds-gnome
+      - f29-backgrounds-gnome
+      - f30-backgrounds-gnome
+
+  - type: dnf
+    install:
+      packages:
+      - f31-backgrounds-gnome
+      - f32-backgrounds-gnome
+      - f33-backgrounds-gnome
+      - f34-backgrounds-gnome
+      - f35-backgrounds-gnome
+      - f36-backgrounds-gnome
+      - f37-backgrounds-gnome
+      - f38-backgrounds-gnome
+      - f39-backgrounds-gnome
+      - f40-backgrounds-gnome
+
+  - type: dnf
+    install:
+      packages:
+      - f41-backgrounds-gnome
+      - f42-backgrounds-gnome
+      - f43-backgrounds-gnome
+      - bibata-cursor-theme
+      - papirus-icon-theme
+      - plasma-breeze
+      
+  - type: dnf
+    install:
+      packages:
+      - google-arimo-fonts
+      - google-droid-fonts-all
+      - google-go-fonts
+      - google-noto-fonts-all
+      - google-noto-sans-hk-fonts
+      - google-noto-serif-cjk-fonts
+      - google-roboto-fonts
+      - google-roboto-mono-fonts
+      - google-roboto-slab-fonts
+      - google-rubik-fonts
+
+  - type: dnf
+    install:
+      packages:
+      - arimo-nerd-fonts
+      - jetbrains-mono-fonts-all
+      - jetbrainsmono-nerd-fonts
+      - material-icons-fonts
+      - rsms-inter-fonts
+      - rsms-inter-vf-fonts
+      - terminus-fonts
+      - terminus-fonts-console
+      
+  - type: dnf
+    remove:
+      packages:
+      - gnome-shell-extension-apps-menu
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-common
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-window-list
+
+  - type: dnf
+    install:
+      packages:
+      - gnome-rounded-blur
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-blur-my-shell
+      - gnome-shell-extension-caffeine
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-gsconnect
+      - gnome-shell-extension-just-perfection
 
   - type: default-flatpaks
     configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
+      - notify: false
         scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
-          - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
+        install:
+        - com.belmoussaoui.Decoder
+        - com.brave.Browser
+        - com.github.tchx84.Flatseal
+        - com.mattjakeman.ExtensionManager
+        - com.vixalien.sticky
+        - io.missioncenter.MissionCenter
+        - org.gnome.baobab
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.Chess
+        - org.gnome.clocks
+        - org.gnome.Decibels
+        - org.gnome.font-viewer
+        - org.gnome.Logs
+        - org.gnome.Loupe
+        - org.gnome.Mahjongg
+        - org.gnome.Mines
+        - org.gnome.Nibbles
+        - org.gnome.Papers
+        - org.gnome.Showtime
+        - org.gnome.SimpleScan
+        - org.gnome.Snapshot
+        - org.gnome.Sudoku
+        - org.gnome.TextEditor
+        - org.libreoffice.LibreOffice
+        - org.gnome.Weather
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: gnome-extensions
+    install:
+      - Alphabetical App Grid
+      - Keep Favorites/Pinned Apps in AppGrid
+      - Logo Menu
+      - Tiling Assistant
+
+  - type: files
+    files:
+      - source: applications
+        # scary
+        destination: /
+
+  - type: script
+    scripts:
+    - post.sh
+
+  - type: initramfs
+  - type: signing
