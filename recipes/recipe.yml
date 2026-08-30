@@ -33,6 +33,24 @@ modules:
 
   - type: dnf
     replace:
+      - from-repo: rpmfusion-free-updates
+        allow-erasing: true
+        packages:
+          - old: libavcodec
+            new: ffmpeg-libs
+          - old: libavfilter
+            new: ffmpeg-libs
+          - old: libavformat
+            new: ffmpeg-libs
+          - old: libavutil
+            new: ffmpeg-libs
+          - old: libswresample
+            new: ffmpeg-libs
+          - old: libswscale
+            new: ffmpeg-libs
+
+  - type: dnf
+    replace:
     - from-repo: terra-mesa
       packages:
       - mesa-dri-drivers
