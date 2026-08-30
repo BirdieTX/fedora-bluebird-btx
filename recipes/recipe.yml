@@ -63,11 +63,6 @@ modules:
       allow-erasing: true
       packages:
         - kvazaar-libs
-    - from-repo: rpmfusion-free
-      allow-erasing: true
-      packages:
-      - old: libheif
-        new: libheif-freeworld
     - from-repo: terra-mesa
       packages:
       - mesa-dri-drivers
@@ -93,6 +88,7 @@ modules:
       - gstreamer1-plugins-ugly
       - kf6-kirigami-addons
       - kvantum
+      - libheif-freeworld
       - mc
       - qt5ct
       - qt6ct
