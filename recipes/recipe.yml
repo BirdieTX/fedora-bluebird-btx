@@ -86,14 +86,12 @@ modules:
       packages:
       - alacritty
       - btop
+      - btrfs-assistant
       - cmatrix
       - cargo
       - eza
       - fastfetch
-      - gstreamer1-plugins-ugly
-      - kf6-kirigami-addons
       - kvantum
-      - libheif-freeworld
       - mc
       - qt5ct
       - qt6ct
@@ -114,7 +112,13 @@ modules:
       packages:
       - ffmpeg
       - gamescope
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-ugly
+      - HandBrake
+      - kf6-kirigami-addons
+      - libheif-freeworld
       - libxavs
+      - pipewire-codec-aptx
       - steam
 
   - type: dnf
