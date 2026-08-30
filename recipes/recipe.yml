@@ -50,6 +50,8 @@ modules:
         new: ffmpeg-libs
       - old: libswscale
         new: ffmpeg-libs
+      - old: pipewire-libs-extra
+        new: pipewire-codec-aptx
       - ffmpeg-libs
       - libfreeaptx
       - x264-libs
@@ -118,7 +120,6 @@ modules:
       - kf6-kirigami-addons
       - libheif-freeworld
       - libxavs
-      - pipewire-codec-aptx
       - steam
 
   - type: dnf
