@@ -43,8 +43,6 @@ modules:
       - cargo
       - eza
       - fastfetch
-      - HandBrake-cli
-      - kf6-kirigami-addons
       - kvantum
       - mc
       - qt5ct
@@ -71,13 +69,14 @@ modules:
       - mesa-libGL
       - mesa-libgbm
       - mesa-vulkan-drivers
+
   - type: dnf
     install:
       packages:
       - gamescope
       - HandBrake-cli
       - kf6-kirigami-addons
-      - Steam
+      - steam
 
   - type: dnf
     install:
