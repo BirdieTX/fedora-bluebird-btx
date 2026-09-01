@@ -39,7 +39,6 @@ modules:
       packages:
       - alacritty
       - cargo
-      - eza
       - fastfetch
       - kvantum
       - qt5ct
