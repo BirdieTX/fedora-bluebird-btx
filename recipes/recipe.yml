@@ -39,7 +39,6 @@ modules:
       packages:
       - alacritty
       - btop
-      - cmatrix
       - cargo
       - eza
       - fastfetch
