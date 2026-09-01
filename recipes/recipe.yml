@@ -248,7 +248,7 @@ modules:
         - org.virt_manager.virt-manager
         - org.videolan.VLC
         - ro.go.hmlendea.DL-Desktop
-
+        - sh.ppy.osu
 
   - type: gnome-extensions
     install:
