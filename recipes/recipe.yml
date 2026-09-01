@@ -42,7 +42,6 @@ modules:
       - eza
       - fastfetch
       - kvantum
-      - mc
       - qt5ct
       - qt6ct
       - rust
