@@ -38,12 +38,17 @@ modules:
     install:
       packages:
       - alacritty
+      - btop
       - cargo
+      - cmatrix
+      - eza
       - fastfetch
       - kvantum
       - qt5ct
       - qt6ct
       - rust
+      - settroubleshoot
+      - signal-cli
       - starship
       - vim-default-editor
       - yazi
