@@ -45,7 +45,6 @@ modules:
       - qt5ct
       - qt6ct
       - rust
-      - setroubleshoot
       - signal-cli
       - starship
       - vim-default-editor
