@@ -169,7 +169,6 @@ modules:
       - kolourpaint
       - krename
       - krita
-      - kstars
       - okteta
 
   - type: dnf
@@ -185,6 +184,27 @@ modules:
       packages:
       - qbittorrent
       - virt-manager
+
+  - type: dnf
+    replace:
+    - from-repo: updates
+      packages:
+          - ca-certificates
+          - librepo
+
+  - type: dnf
+    replace:
+    - from-repo: fedora-multimedia
+      packages:
+          - gstreamer1-plugin-libav
+          - old: gstreamer1-plugin-openh264
+            new: gstreamer1-plugins-bad
+          - old: gstreamer1-plugins-bad-free
+            new: gstreamer1-plugins-bad
+          - old: gstreamer1-plugins-bad-free-libs
+            new: gstreamer1-plugins-bad
+          - old: gstreamer1-plugins-ugly-free
+            new: gstreamer1-plugins-ugly
 
   - type: default-flatpaks
     configurations:
