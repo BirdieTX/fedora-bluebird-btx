@@ -73,9 +73,7 @@ modules:
   - type: dnf
     install:
       packages:
-      - bottles
       - gamescope
-      - lutris
       - steam
 
   - type: dnf
@@ -206,6 +204,7 @@ modules:
         - com.pokemmo.PokeMMO
         - com.protonvpn.www
         - com.rafaelmardojai.Blanket
+        - com.usebottles.bottles
         - com.vixalien.sticky
         - com.vysp3r.ProtonPlus
         - dev.bragefuglseth.Keypunch
@@ -222,6 +221,7 @@ modules:
         - md.obsidian.Obsidian
         - me.proton.Mail
         - me.proton.Pass
+        - net.lutris.Lutris
         - net.runelite.RuneLite
         - org.audacityteam.Audacity
         - org.blender.Blender
