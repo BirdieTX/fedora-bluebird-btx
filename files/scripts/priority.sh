@@ -14,7 +14,7 @@ dnf5 config-manager setopt \
     terra-mesa.priority=87
 
 dnf5 config-manager setopt \
-    updates-archive.name='Fedora Updates (Archive)'
+    updates-archive.name='Fedora Updates (Archive)' \
     copr:copr.fedorainfracloud.org:ublue-os:packages.name='Universal Blue' \
     copr:copr.fedorainfracloud.org:ublue-os:akmods.name='Nvidia Drivers' \
     fedora.name='Fedora Core' \
