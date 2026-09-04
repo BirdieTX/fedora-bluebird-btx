@@ -277,7 +277,6 @@ modules:
 
   - type: script
     scripts:
-    - magpie.sh
     - post.sh
 
   - type: initramfs
