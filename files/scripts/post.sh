@@ -15,5 +15,5 @@ dconf update
 systemctl disable NetworkManager-wait-online.service
 systemctl enable grub-config.service
 systemctl enable bluebird-pin-deployment.timer
-dnf5 upgrade --refresh --allow-vendor-change
+dnf5 upgrade --allow-vendor-change --refresh -y
 plymouth-set-default-theme bgrt-mac-style
