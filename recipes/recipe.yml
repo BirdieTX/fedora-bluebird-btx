@@ -73,9 +73,9 @@ modules:
   - type: dnf
     install:
       packages:
+      - bottles
       - gamescope
-      - HandBrake-cli
-      - kf6-kirigami-addons
+      - lutris
       - steam
 
   - type: dnf
@@ -166,19 +166,27 @@ modules:
   - type: dnf
     install:
       packages:
-      - bottles
+      - kf6-kirigami-addons
       - kid3
       - kolourpaint
       - krename
       - krita
       - kstars
-      - lutris
-      - obs-studio
       - okteta
-      - qbittorrent
-      - virt-manager
+
+  - type: dnf
+    install:
+      packages:
+      - HandBrake-cli
+      - obs-studio
       - vlc
       - vlc-plugins-all
+
+  - type: dnf
+    install:
+      packages:
+      - qbittorrent
+      - virt-manager
 
   - type: default-flatpaks
     configurations:
