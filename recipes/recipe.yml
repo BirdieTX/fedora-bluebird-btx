@@ -24,7 +24,7 @@ modules:
       - firefox-langpacks
       - gnome-system-monitor
       - nano-default-editor
-  
+
   - type: dnf
     install:
       packages:
@@ -44,6 +44,7 @@ modules:
       - eza
       - fastfetch
       - kvantum
+      - mission-center
       - qt5ct
       - qt6ct
       - rust
@@ -114,7 +115,7 @@ modules:
       - bibata-cursor-theme
       - papirus-icon-theme
       - plasma-breeze
-      
+
   - type: dnf
     install:
       packages:
@@ -140,7 +141,7 @@ modules:
       - rsms-inter-vf-fonts
       - terminus-fonts
       - terminus-fonts-console
-      
+
   - type: dnf
     remove:
       packages:
@@ -162,6 +163,23 @@ modules:
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-just-perfection
 
+  - type: dnf
+    install:
+      packages:
+      - bottles
+      - kid3
+      - kolourpaint
+      - krename
+      - krita
+      - kstars
+      - lutris
+      - obs-studio
+      - okteta
+      - qbittorrent
+      - virt-manager
+      - vlc
+      - vlc-plugins-all
+
   - type: default-flatpaks
     configurations:
       - notify: false
@@ -177,11 +195,9 @@ modules:
         - com.github.tchx84.Flatseal
         - com.markopejic.downloader
         - com.mattjakeman.ExtensionManager
-        - com.obsproject.Studio
         - com.pokemmo.PokeMMO
         - com.protonvpn.www
         - com.rafaelmardojai.Blanket
-        - com.usebottles.bottles
         - com.vixalien.sticky
         - com.vysp3r.ProtonPlus
         - dev.bragefuglseth.Keypunch
@@ -195,11 +211,9 @@ modules:
         - io.github.idevecore.Valuta
         - io.github.Soundux
         - io.github.wartybix.Constrict
-        - io.missioncenter.MissionCenter
         - md.obsidian.Obsidian
         - me.proton.Mail
         - me.proton.Pass
-        - net.lutris.Lutris
         - net.runelite.RuneLite
         - org.audacityteam.Audacity
         - org.blender.Blender
@@ -230,22 +244,13 @@ modules:
         - org.inkscape.Inkscape
         - org.kde.elisa
         - org.kde.kdenlive
-        - org.kde.kid3
-        - org.kde.kolourpaint
         - org.kde.kpat
-        - org.kde.krename
-        - org.kde.krita
-        - org.kde.kstars
-        - org.kde.okteta
         - org.libreoffice.LibreOffice
         - org.localsend.localsend_app
         - org.openttd.OpenTTD
         - org.pulseaudio.pavucontrol
-        - org.qbittorrent.qBittorrent
         - org.remmina.Remmina
         - org.signal.Signal
-        - org.virt_manager.virt-manager
-        - org.videolan.VLC
         - ro.go.hmlendea.DL-Desktop
         - sh.ppy.osu
 
@@ -264,6 +269,7 @@ modules:
 
   - type: script
     scripts:
+    - magpie.sh
     - post.sh
 
   - type: initramfs
