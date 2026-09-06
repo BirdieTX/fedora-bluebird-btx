@@ -100,7 +100,6 @@ modules:
       - f41-backgrounds-gnome
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
-      - gnome-themes-extra
       - papirus-icon-theme
       - plasma-breeze
 
