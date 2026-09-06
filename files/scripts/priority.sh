@@ -14,12 +14,12 @@ dnf5 config-manager setopt \
     terra-mesa.priority=87
 
 dnf5 config-manager setopt \
-    updates-archive.name='Fedora Updates (Archive)' \
     copr:copr.fedorainfracloud.org:ublue-os:packages.name='Universal Blue' \
     copr:copr.fedorainfracloud.org:ublue-os:akmods.name='Nvidia Drivers' \
     fedora.name='Fedora Core' \
-    updates.name='Fedora Updates' \
     fedora-cisco-openh264.name='Cisco OpenH264' \
-    terra.name='Fyra Labs Terra' \
     fedora-multimedia.name='Fedora Multilib' \
-    terra-mesa.name='Fyra Labs Mesa'
+    terra.name='Fyra Labs Terra' \
+    terra-mesa.name='Fyra Labs Mesa' \
+    updates.name='Fedora Updates' \
+    updates-archive.name='Fedora Updates (Archive)'

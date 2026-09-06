@@ -46,7 +46,7 @@ modules:
       - eza
       - fastfetch
       - kvantum
-      - mission-center
+      - nano
       - qt5ct
       - qt6ct
       - rust
@@ -60,23 +60,6 @@ modules:
       - zsh-autosuggestions
       - zsh-html
       - zsh-syntax-highlighting
-
-  - type: dnf
-    replace:
-    - from-repo: terra-mesa
-      packages:
-      - mesa-dri-drivers
-      - mesa-filesystem
-      - mesa-libEGL
-      - mesa-libGL
-      - mesa-libgbm
-      - mesa-vulkan-drivers
-
-  - type: dnf
-    install:
-      packages:
-      - gamescope
-      - steam
 
   - type: dnf
     install:
@@ -173,26 +156,36 @@ modules:
       - krename
       - krita
       - okteta
+      - qbittorrent
+      - virt-manager
 
   - type: dnf
     install:
       packages:
+      - gamescope
       - HandBrake-cli
       - obs-studio
+      - steam
       - vlc
       - vlc-plugins-all
 
   - type: dnf
-    install:
+    replace:
+    - from-repo: terra-mesa
       packages:
-      - qbittorrent
-      - virt-manager
+      - mesa-dri-drivers
+      - mesa-filesystem
+      - mesa-libEGL
+      - mesa-libGL
+      - mesa-libgbm
+      - mesa-vulkan-drivers
 
   - type: default-flatpaks
     configurations:
       - notify: false
         scope: system
         install:
+        - ca.desrt.dconf-editor
         - com.adamcake.Bolt
         - com.brave.Browser
         - com.belmoussaoui.Decoder
@@ -218,6 +211,7 @@ modules:
         - io.github.diegoivan.pdf_metadata_editor
         - io.github.fizzyizzy05.binary
         - io.github.idevecore.Valuta
+        - io.github.plrigaux.sysd-manager
         - io.github.Soundux
         - io.github.wartybix.Constrict
         - md.obsidian.Obsidian
@@ -228,6 +222,7 @@ modules:
         - org.audacityteam.Audacity
         - org.blender.Blender
         - org.desktop_plus.desktop-plus
+        - org.freedesktop.Bustle
         - org.gimp.GIMP
         - org.gnome.baobab
         - org.gnome.Calculator
@@ -236,6 +231,7 @@ modules:
         - org.gnome.Chess
         - org.gnome.clocks
         - org.gnome.Decibels
+        - org.gnome.dspy
         - org.gnome.font-viewer
         - org.gnome.gitlab.YaLTeR.VideoTrimmer
         - org.gnome.Logs
@@ -261,6 +257,7 @@ modules:
         - org.pulseaudio.pavucontrol
         - org.remmina.Remmina
         - org.signal.Signal
+        - page.tesk.Refine
         - ro.go.hmlendea.DL-Desktop
         - sh.ppy.osu
 
