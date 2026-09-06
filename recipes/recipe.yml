@@ -37,6 +37,17 @@ modules:
     - priority.sh
 
   - type: dnf
+    replace:
+    - from-repo: terra-mesa
+      packages:
+      - mesa-dri-drivers
+      - mesa-filesystem
+      - mesa-libEGL
+      - mesa-libGL
+      - mesa-libgbm
+      - mesa-vulkan-drivers
+
+  - type: dnf
     install:
       packages:
       - alacritty
@@ -46,6 +57,8 @@ modules:
       - eza
       - fastfetch
       - kvantum
+      - mangowm
+      - noctalia
       - qt5ct
       - qt6ct
       - rust
@@ -63,6 +76,7 @@ modules:
   - type: dnf
     install:
       packages:
+      - bibata-cursor-theme
       - f21-backgrounds-gnome
       - f22-backgrounds-gnome
       - f23-backgrounds-gnome
@@ -73,10 +87,6 @@ modules:
       - f28-backgrounds-gnome
       - f29-backgrounds-gnome
       - f30-backgrounds-gnome
-
-  - type: dnf
-    install:
-      packages:
       - f31-backgrounds-gnome
       - f32-backgrounds-gnome
       - f33-backgrounds-gnome
@@ -87,20 +97,16 @@ modules:
       - f38-backgrounds-gnome
       - f39-backgrounds-gnome
       - f40-backgrounds-gnome
-
-  - type: dnf
-    install:
-      packages:
       - f41-backgrounds-gnome
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
-      - bibata-cursor-theme
       - papirus-icon-theme
       - plasma-breeze
 
   - type: dnf
     install:
       packages:
+      - arimo-nerd-fonts
       - google-arimo-fonts
       - google-droid-fonts-all
       - google-go-fonts
@@ -111,11 +117,6 @@ modules:
       - google-roboto-mono-fonts
       - google-roboto-slab-fonts
       - google-rubik-fonts
-
-  - type: dnf
-    install:
-      packages:
-      - arimo-nerd-fonts
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
       - material-icons-fonts
@@ -123,6 +124,23 @@ modules:
       - rsms-inter-vf-fonts
       - terminus-fonts
       - terminus-fonts-console
+
+  - type: dnf
+    install:
+      packages:
+
+
+  - type: dnf
+    install:
+      packages:
+      - kf6-kirigami-addons
+      - kid3
+      - kolourpaint
+      - krename
+      - krita
+      - okteta
+      - qbittorrent
+      - virt-manager
 
   - type: dnf
     remove:
@@ -145,26 +163,6 @@ modules:
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-just-perfection
-
-  - type: dnf
-    install:
-      packages:
-      - kf6-kirigami-addons
-      - kid3
-      - kolourpaint
-      - krename
-      - krita
-      - okteta
-      
-  - type: dnf
-    install:
-      packages:
-      - qbittorrent
-      - virt-manager
-
-  - type: dnf
-    install:
-      packages:
       - HandBrake-cli
       - obs-studio
       - vlc
@@ -173,25 +171,8 @@ modules:
   - type: dnf
     install:
       packages:
-      - mangowm
-      - noctalia
-
-  - type: dnf
-    install:
-      packages:
       - steam
       - gamescope
-
-  - type: dnf
-    replace:
-    - from-repo: terra-mesa
-      packages:
-      - mesa-dri-drivers
-      - mesa-filesystem
-      - mesa-libEGL
-      - mesa-libGL
-      - mesa-libgbm
-      - mesa-vulkan-drivers
 
   - type: default-flatpaks
     configurations:
