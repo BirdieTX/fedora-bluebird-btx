@@ -155,18 +155,32 @@ modules:
       - krename
       - krita
       - okteta
+      
+  - type: dnf
+    install:
+      packages:
       - qbittorrent
       - virt-manager
 
   - type: dnf
     install:
       packages:
-      - gamescope
       - HandBrake-cli
       - obs-studio
-      - steam
       - vlc
       - vlc-plugins-all
+
+  - type: dnf
+    install:
+      packages:
+      - mangowm
+      - noctalia
+
+  - type: dnf
+    install:
+      packages:
+      - steam
+      - gamescope
 
   - type: dnf
     replace:
