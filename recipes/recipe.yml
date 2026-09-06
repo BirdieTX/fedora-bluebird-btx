@@ -160,6 +160,7 @@ modules:
       - gnome-shell-extension-just-perfection
       - HandBrake-cli
       - obs-studio
+      - openrgb
       - vlc
       - vlc-plugins-all
 
@@ -203,6 +204,7 @@ modules:
         - io.github.plrigaux.sysd-manager
         - io.github.Soundux
         - io.github.wartybix.Constrict
+        - io.missioncenter.MissionCenter
         - md.obsidian.Obsidian
         - me.proton.Mail
         - me.proton.Pass
@@ -261,7 +263,7 @@ modules:
     files:
       - source: applications
         # scary
-        destination: /
+        destination: /usr/share
 
   - type: script
     scripts:
