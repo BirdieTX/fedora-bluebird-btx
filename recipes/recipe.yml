@@ -160,7 +160,6 @@ modules:
       - gnome-shell-extension-just-perfection
       - HandBrake-cli
       - obs-studio
-      - openrgb
       - vlc
       - vlc-plugins-all
 
