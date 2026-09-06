@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Prime95
-Exec=~/usr/local/bin/prime95.sh
+Exec=~/usr/bin/prime95.sh
 Icon=prime95
 Terminal=true
 Type=Application

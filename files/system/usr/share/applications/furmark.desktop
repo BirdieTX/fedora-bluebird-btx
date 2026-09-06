@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=FurMark
-Exec=/usr/local/bin/furmark.sh
+Exec=/usr/bin/furmark.sh
 Icon=furmark
 Terminal=false
 Type=Application
