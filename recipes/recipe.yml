@@ -262,7 +262,7 @@ modules:
     files:
       - source: applications
         # scary
-        destination: /usr/share
+        destination: /
 
   - type: script
     scripts:
